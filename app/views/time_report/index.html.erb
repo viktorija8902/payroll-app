@@ -24,7 +24,7 @@
     </div>
   <% end %>
 
-  <% if @payroll_report != {} %>
+  <% if !@payroll_report.empty? %>
     <h2>Generated payroll report</h2>
     <div id="payroll-table">
       <div class="column-name">Employee ID</div>
