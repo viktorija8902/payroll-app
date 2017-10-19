@@ -1,0 +1,86 @@
+// variables
+$column-width: 95px;
+$payroll-column-width: 185px;
+$break-point: 420px;
+
+#payroll-page {
+  width: $break-point;
+  margin: 40px auto 20px auto;
+  h1, h2 {
+    text-align: center;
+  }
+  .file-upload-form {
+    .action-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .upload {
+        width: 70%;
+        text-align: left;
+        .text {
+          padding-bottom: 10px;
+        }
+      }
+      .submit {
+        width: 30%;
+        padding-top: 7px;
+        text-align: right;
+        .submit-btn {
+          background-color: #65b765;
+          border-radius: 7px;
+          width: 90px;
+          height: 40px;
+          cursor: pointer;
+        }
+      }
+    }
+    .notification-section {
+      .message {
+        font-weight: bold;
+        padding: 15px 0px;
+      }
+      .message.success {
+        color: #347d34;
+      }
+      .message.error {
+        color: #e81717;
+      }
+    }
+  }
+  #payroll-table {
+    line-height: 2;
+    .column-name, .column-info {
+      display: inline-block;
+      width: $column-width;
+      text-align: center;
+    }
+    .column-name {
+      font-weight: bold;
+    }
+    .column-name.pay-period {
+      width: $payroll-column-width;
+    }
+    .payroll-row {
+      .column-info.pay-period {
+        width: $payroll-column-width;
+      }
+    }
+    .payroll-row:nth-child(even) {
+      background-color: #f3f3f3;
+    }
+  }
+}
+
+@media (max-width: $break-point) {
+  #payroll-page {
+    width: 100%;
+    .file-upload-form {
+      .action-section {
+        display: block;
+        .upload, .submit {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
