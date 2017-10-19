@@ -1,4 +1,6 @@
-$payroll-column-width: 190px;
+// variables
+$column-width: 95px;
+$payroll-column-width: 185px;
 $break-point: 420px;
 
 #payroll-page {
@@ -21,6 +23,7 @@ $break-point: 420px;
       }
       .submit {
         width: 30%;
+        padding-top: 7px;
         text-align: right;
         .submit-btn {
           background-color: #65b765;
@@ -48,7 +51,7 @@ $break-point: 420px;
     line-height: 2;
     .column-name, .column-info {
       display: inline-block;
-      width: 110px;
+      width: $column-width;
       text-align: center;
     }
     .column-name {
