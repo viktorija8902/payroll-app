@@ -1,15 +1,32 @@
-<%= form_tag({action: :save_file}, multipart: true) do %>
-  Please upload csv file<%= file_field_tag "file" %>
-  <%= submit_tag("Upload") %>
-<% end %>
+<div id="payroll-page">
+  <%= form_tag({action: :save_file}, multipart: true) do %>
+    Please upload csv file<%= file_field_tag "file" %>
+    <%= submit_tag("Upload") %>
+  <% end %>
 
-<% if @success %>
-  <div> <%= @success %></div>
-<% end %>
-<% if @error %>
-  <div> <%= @error %></div>
-<% end %>
+  <% if @success %>
+    <div class="message success"> <%= @success %></div>
+  <% end %>
+  <% if @error %>
+    <div class="message error"> <%= @error %></div>
+  <% end %>
 
-<% if @payroll_report != {} %>
-  <%= @payroll_report %>
-<% end %>
+  <% if @payroll_report != {} %>
+    <h1>Payroll report</h1>
+    <div id="payroll-table">
+      <div class="table-header">
+        <div class="column-name">Employee ID</div>
+        <div class="column-name">Pay Period</div>
+        <div class="column-name">Amount Paid</div>
+      </div>
+      <% @payroll_report.each do |report|  %>
+      <div class="payroll-row">
+        <div class="column-info"><%= report["employee_id"] %></div>
+        <div class="column-info"><%= report["pay_period"] %></div>
+        <div class="column-info"><%= report["amount_paid"] %></div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  <% end %>
+</div>
