@@ -1,5 +1,5 @@
 class PayrollReport < ApplicationRecord
-  def self.create_report
+  def self.show_report
     time_reports = TimeReportInfo.get_grouped_reports
     payroll_report = []
     for time_report in time_reports
