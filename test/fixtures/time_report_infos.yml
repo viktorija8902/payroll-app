@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_date: 2017-10-18
+  pay_period_start: 2017-10-18
+  pay_period_end: 2017-10-18
+  hours_worked: 9.99
+  employee_id: 1
+  job_group: MyString
+  report_id: 1
+
+two:
+  report_date: 2017-10-18
+  pay_period_start: 2017-10-18
+  pay_period_end: 2017-10-18
+  hours_worked: 9.99
+  employee_id: 1
+  job_group: MyString
+  report_id: 1

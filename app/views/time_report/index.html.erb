@@ -1,0 +1,15 @@
+<%= form_tag({action: :save_file}, multipart: true) do %>
+  Please upload csv file<%= file_field_tag "file" %>
+  <%= submit_tag("Upload") %>
+<% end %>
+
+<% if @success %>
+  <div> <%= @success %></div>
+<% end %>
+<% if @error %>
+  <div> <%= @error %></div>
+<% end %>
+
+<% if @time_reports != {} %>
+  <%= @time_reports %>
+<% end %>
