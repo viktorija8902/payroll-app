@@ -1,15 +1,20 @@
 class TimeReportController < ApplicationController
   def index
-    @payroll_report = PayrollReport.create_report
+    @payroll_report = PayrollReport.show_report
   end
 
   def save_file
-    if TimeReportProcessor.import(user_params[:file].path) == "Success"
-      @success = "Report uploaded!"
+    if user_params[:file]
+      result = TimeReportProcessor.import(user_params[:file].path)
+      if result == "Success"
+        @success = "Report uploaded!"
+      else
+        @error = result
+      end
     else
-      @error = "It is not allowed to upload the same report."
+      @error = "Error: Please import csv file."
     end
-    @payroll_report = PayrollReport.create_report
+    @payroll_report = PayrollReport.show_report
     render "index"
   end
 
