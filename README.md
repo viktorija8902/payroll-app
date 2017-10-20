@@ -1,24 +1,7 @@
-# README
+System calculates and shows payrolls based on imported time reports. Sample time reports can be found in folder /sample_files.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Installation and running
+1. install Ruby, sqlite3, Ruby on Rails
+2. clone this repository and go to its folder
+3. install dependencies: bundle install
+4. run the server: rails s
