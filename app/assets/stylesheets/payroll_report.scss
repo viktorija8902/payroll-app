@@ -1,5 +1,6 @@
 // variables
 $column-width: 95px;
+$column-width-mobile: 30%;
 $payroll-column-width: 185px;
 $break-point: 420px;
 
@@ -16,22 +17,16 @@ $break-point: 420px;
       align-items: center;
       .upload {
         width: 70%;
-        text-align: left;
         .text {
           padding-bottom: 10px;
         }
       }
-      .submit {
-        width: 30%;
-        padding-top: 7px;
-        text-align: right;
-        .submit-btn {
-          background-color: #65b765;
-          border-radius: 7px;
-          width: 90px;
-          height: 40px;
-          cursor: pointer;
-        }
+      .submit-btn {
+        background-color: #65b765;
+        border-radius: 7px;
+        width: 90px;
+        height: 40px;
+        cursor: pointer;
       }
     }
     .notification-section {
@@ -77,8 +72,23 @@ $break-point: 420px;
     .file-upload-form {
       .action-section {
         display: block;
-        .upload, .submit {
+        .upload, .submit-btn {
           width: 100%;
+        }
+        .submit-btn {
+          margin-top: 20px;
+        }
+      }
+    }
+    #payroll-table {
+      .column-name, .column-info, .column-name.pay-period {
+        width: $column-width-mobile;
+      }
+      .payroll-row {
+        display: flex;
+        align-items: center;
+        .column-info.pay-period {
+          width: $column-width-mobile;
         }
       }
     }
