@@ -31,9 +31,9 @@
 
       <% @payroll_report.each do |report|  %>
       <div class="payroll-row">
-        <div class="column-info"><%= report["employee_id"] %></div>
-        <div class="column-info pay-period"><%= report["pay_period"] %></div>
-        <div class="column-info">$<%= report["amount_paid"] %></div>
+        <div class="column-info"><%= report[:employee_id] %></div>
+        <div class="column-info pay-period"><%= report[:pay_period] %></div>
+        <div class="column-info">$<%= report[:amount_paid] %></div>
       </div>
     <% end %>
     </div>
