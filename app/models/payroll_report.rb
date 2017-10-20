@@ -4,7 +4,7 @@ class PayrollReport < ApplicationRecord
 
   def self.show_report
     time_reports = TimeReportInfo.get_grouped_reports
-    self.form_payroll_report(time_reports)
+    form_payroll_report(time_reports)
   end
 
   private
@@ -12,11 +12,11 @@ class PayrollReport < ApplicationRecord
   def self.form_payroll_report(time_reports)
     payroll_report = []
     for time_report in time_reports
-      amount_paid = self.get_amount_paid(
+      amount_paid = get_amount_paid(
                             time_report[:job_group],
                             time_report[:hours_worked]
       )
-      payroll_row = self.form_payroll_row(
+      payroll_row = form_payroll_row(
                             time_report[:employee_id],
                             time_report[:pay_period_start],
                             time_report[:pay_period_end],
