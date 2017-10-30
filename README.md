@@ -6,4 +6,4 @@
 
 
 ### Features
-System calculates and shows payrolls based on imported time reports. Sample time reports can be found in folder /sample_files. Webpage has responsive design, error/success messages are implemented. Report period is decided when information about the time reports is written to the database, this makes it easier to group and sort date afterwards.
+System calculates and shows payrolls based on imported time reports. Sample time reports can be found in folder /sample_files. Webpage has responsive design, error/success messages are implemented. Report period is decided when information about the time reports is written to the database, this makes it easier to group and sort data afterwards.
